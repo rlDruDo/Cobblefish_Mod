@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cobblefish:cobblefish_item"
+  },
+  "result": "cobblefish:stone_fish",
+  "experience": 0.35,
+  "cookingtime": 200
+}

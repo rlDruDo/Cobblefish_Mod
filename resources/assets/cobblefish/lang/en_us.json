@@ -1,0 +1,8 @@
+{
+    "enchantment.cobblefish.stone" : "Swimming Stone",
+    "entity.cobblefish.COBBLEFISH_ENTITY" : "Cobblefish",
+    "item.cobblefish.cobblefish_item" : "Cobblefish",
+    "item.cobblefish.stone_fish" : "Stonefish",
+    "item.cobblefish.better_stone_fish" : "Rare Stonefish",
+    "item.cobblefish.cobblefish_bucket" : "Cobblefish Bucket"
+}

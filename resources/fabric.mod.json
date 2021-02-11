@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblefish",
+  "version": "${version}",
+
+  "name": "Cobblefish Mod",
+  "description": "Adds a boring new fish.",
+  "authors": [
+    "Me"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "assets/cobblefish/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "elbrunanzo.cobble.fish.cobblefish"
+    ],
+    "client": [
+      "elbrunanzo.cobble.fish.EntityTestingClient"
+    ]
+  },
+  "mixins": [
+    "cobblefish.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
