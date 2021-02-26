@@ -63,9 +63,12 @@ public class cobblefishEntity extends SchoolingFishEntity {
         return SoundEvents.ENTITY_COD_FLOP;
     }
 
+    //changed the canSSpawn method !world.getBlockState(pos.down()).isOf(Blocks.WATER) instead of (!world.getBlockState(pos.down()).isOf(Blocks.WATER) || !world.getBlockState(pos.down(2)).isOf(Blocks.WATER))
+    // This caused wrong spawning, I changed the weight too: 7 to 20; this might flood the ocean or make it very rare bcs of the hard spawnrestriction, time will tell.
     public static boolean canSSpawn(EntityType<cobblefishEntity> mob, ServerWorldAccess world, SpawnReason spawnReason, BlockPos pos, Random random) {
-        return !(world.getBlockState(pos.down()).getBlock() instanceof PlantBlock) && world.getBlockState(pos).isOf(Blocks.WATER) && (!world.getBlockState(pos.down()).isOf(Blocks.WATER) || !world.getBlockState(pos.down(2)).isOf(Blocks.WATER));
+        return !(world.getBlockState(pos.down()).getBlock() instanceof PlantBlock) && world.getBlockState(pos).isOf(Blocks.WATER) && !world.getBlockState(pos.down()).isOf(Blocks.WATER);
     }
+
     public static class swimtobottomgoal extends MoveToTargetPosGoal{
         public swimtobottomgoal(PathAwareEntity mob, double speed, int range) {
             super(mob, speed, range);
