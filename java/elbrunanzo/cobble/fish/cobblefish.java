@@ -51,9 +51,9 @@ public class cobblefish implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier(abc, "better_stone_fish"), better_stone_fish);
 		cobblefish_bucket = Registry.register(Registry.ITEM, new Identifier(abc, "cobblefish_bucket"), new FishBucketItem(cobblefish.COBBLEFISH_ENTITY, Fluids.WATER, new Item.Settings().group(ItemGroup.MISC).maxCount(1)));
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.OCEAN, BiomeKeys.DEEP_OCEAN, BiomeKeys.DEEP_COLD_OCEAN, BiomeKeys.COLD_OCEAN, BiomeKeys.FROZEN_OCEAN,
-		BiomeKeys.WARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN), SpawnGroup.WATER_AMBIENT, COBBLEFISH_ENTITY, 7, 4, 10);
+		BiomeKeys.WARM_OCEAN, BiomeKeys.LUKEWARM_OCEAN, BiomeKeys.DEEP_WARM_OCEAN, BiomeKeys.DEEP_LUKEWARM_OCEAN, BiomeKeys.DEEP_FROZEN_OCEAN), SpawnGroup.WATER_AMBIENT, COBBLEFISH_ENTITY, 20, 4, 10);
 		SpawnRestrictionAccessor.callRegister(COBBLEFISH_ENTITY, SpawnRestriction.Location.IN_WATER, Heightmap.Type.OCEAN_FLOOR, cobblefishEntity::canSSpawn);
-
+		// weight might need adjustemnts in the future
 	}
 
 
